@@ -59,19 +59,31 @@ body {
 	left: 60px;
 }
 /* 안내 링크 */
-.info{
-	background-color: yellow;
+.info{ 
 	font-size: 0;
 	text-align: right;
+	margin-right: -8px;
 }
-.info li{
-	background-color: pink;
+.info li{ 
 	margin: 10px 0;
 	display: inline-block;
 	font-size: 1.4rem;
 }
-.info a{
-	background-color: lime;
+/*.info li::before{
+	content: ":";
+
+}
+.info li:first-child:before{
+	content: "";
+}*/
+
+.info li:nth-child(n+2)::before{
+	content: ":";
+}
+
+.info a{ 
+	padding: 5px 8px;
+	text-transform: uppercase;
 }
 /* 메인 메뉴 */
 .main-menu{

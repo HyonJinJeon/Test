@@ -320,6 +320,22 @@ body {
 	float: right;
 }
 
+/*유효성검사배너링크*/
+.validation{
+	background-color: #ff8208;
+	margin-top: 20px;
+}
+
+.validation a{
+	background: url()
+	background-color: gray;
+	display: block;
+	border: 1px solid #aaa;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	padding: 5px 10px 5px 30px;
+}
+
 
 /* 슬로건 */
 .slogan{

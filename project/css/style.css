@@ -38,6 +38,7 @@ a:link, a:visited{
 	content: "";
 	display: block;
 	clear: both;
+	/*부모요소의 가상의 자식을 만들어서 위아래 마진을 만듬.(다른자식참조)*/
 }
 /* 본문 스타일 */
 html{
@@ -364,9 +365,6 @@ body {
 	margin-top: 15px;
 }
 
-.term-list{
-	/*background-color: #ff0;*/
-}
 .term-list-subject, .term-list-brief{ 
 	float: right;
 	width: 145px;
@@ -381,12 +379,60 @@ body {
 	/*background-color: lime;*/
 	float: left;
 }
-
 .term-list-brief{
 	/*background-color: orange;*/
 	line-height: 1.5;
 	margin-top: 10px;
 }
+
+/*웹카페 검색*/
+.search{
+	border: 1px solid #aaa;
+	border-bottom: 0;
+	border-radius: 20px 20px 0 0 ;
+	background: linear-gradient(to bottom, #ccc, #fff);
+	background-color: #ccc;
+	padding: 20px 25px 5px;
+	
+	/*3번쓰면 가운데가 좌우, 2번쓰면 위 아래
+	  top부터 시계방향
+	*/
+}
+
+.search-form fieldset{
+	border: 0;
+}
+
+.search-form label::before{
+	content: "z";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top: 2px;
+	margin-right: 2px;
+}
+
+.search-form input{
+	border: 1px solid #aaa;
+	width: 200px;
+	height: 20px;
+	padding: 1px 1px 1px 5px;
+	border-radius: 3px;
+	/*margin: 0 15px ;*/
+	font-size: 1.3rem;
+	margin: 0 4px 0 3px;
+	/*top right bottom left*/
+}
+
+.btn-search{
+	font-size: 1.3rem;
+	height: 22px;
+	padding: 1px 10px;
+	border:1px solid #aaa;	
+	border-radius: 3px;
+	background-image: linear-gradient(to bottom, #999, #333);
+	background-color: #333;
+	color: #fff;
+} 
 
 /* 슬로건 */
 .slogan{

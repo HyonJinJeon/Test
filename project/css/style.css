@@ -34,7 +34,7 @@ a:link, a:visited{
 	padding: 0
 }
 /* 플로트 이슈를 해결하기 위한 clearfix */
-.main-content::after, .member::after, .term-list::after, .notice::after{
+.main-content::after, .member::after, .term-list::after{
 	content: "";
 	display: block;
 	clear: both;
@@ -438,7 +438,7 @@ body {
 .board{
 	margin-top: 20px;
 	position: relative; 
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
 
 .notice-list, .pds-list, .notice-more, .pds-more{
@@ -447,7 +447,7 @@ body {
 
 .board-active .notice-list, .board-active .pds-list,
 .board-active .notice-more, .board-active .pds-more{
-	display: block !important;
+	display: block ;
 }
 
 .notice-subject, .pds-subject{
@@ -483,8 +483,36 @@ body {
 }
 
 .notice-list, .pds-list {
-	background-color: lime; 
-	padding-top: 45px;
+	/*background-color: lime; */
+	padding-top: 40px;
+}
+
+.notice-list li, .pds-list li{
+	/*background-color: #ff0;*/
+	margin: 8px 0;
+}
+
+.notice-list li::before, .pds-list li::before{
+	content: "r";
+	font-family: 'webcafeIcon';
+	
+	margin-right: 3px;
+
+}
+
+.board-headline{
+	/*background-color: aqua;*/
+	display: inline-block;
+	width: 285px;
+	/*말줄임표만들기*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.board-date{
+	/*background-color: green;*/
+	float:right;
 }
 
 .notice-more, .pds-more {
@@ -504,7 +532,10 @@ body {
 	margin-right: 3px;
 }
   
-
+/*새소식*/
+.news{
+	background-color: yellow;
+}
 
 /* 슬로건 */
 .slogan{

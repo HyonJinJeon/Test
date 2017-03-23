@@ -257,6 +257,26 @@
 
                 </div>    
 
+                <div class="news">
+                    <h2 class="news-subject">새소식</h2>
+                    <article class="newsitem">
+                        <h3 class="news-item-headline">W3C 사이트가 리뉴얼 되었습니다.</h3>
+                        <time class="news-item-date" datetime="2017-03-23T14:07:30">2017-03-23</time>
+                        <p class="news-item-brief">
+                            디자인 및 다양한 view환경을 고려하여 구성되어 있으며, 
+                            기존보다 최신 정보 및 개발자를 위한 기술 가이드도 
+                            찾기 쉽도록 구성되어 있습니다. 
+                        </p>
+                        <figure>
+                            <img src="images/news.gif" 
+                                 alt="HTML5를 발표하면서 W3C 사이트가 리뉴얼 된 모습">
+                            <figcaption>W3C 리뉴얼</figcaption>
+                        </figure>
+                    </article>
+                     <a href="#" class="nes-more" >더보기</a>
+                </div>    
+
+
             </div>        
 
 
@@ -269,5 +289,25 @@
             <footer class="footer">푸터</footer>
         </div>        
     </div>
+
+    <!--성능관점에서 스크립트는 하단에 표기
+        스크립트를 다운로드 후, DOM 렌더링....-->
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $(".tab").click(function(e){
+                // 기본이벤트취소
+                e.preventDefault();
+
+                $(this).parents().parents().addClass("board-active")
+                .siblings().removeClass("board-active");
+                // 메소드 체이닝... 
+                
+            });
+        });             
+    </script>
 </body>
 </html>

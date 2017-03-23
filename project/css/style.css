@@ -481,8 +481,81 @@ body {
 /* 새소식 */
 .news{
 	margin-top: 20px;
-	background-color: yellow;
+	/*background-color: yellow;*/
+	position: relative;
 }
+.news::before{
+	content: "";
+	background: linear-gradient(to right, #aaa, #fff);
+	background-color: #aaa;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 80%;
+	height: 1px;
+}
+.news-subject{
+	font-size: 1.6rem;
+	font-family: 'Noto Sans Bold';
+	color: #fa4306;
+}
+.news-item{
+	/*background-color: pink;*/
+	padding-left: 130px;
+	position: relative;
+	margin-top: 30px;
+}
+
+.news-item-headline{
+	font-size: 1.4rem;
+}
+.news-item-headline::before{
+	content: "r";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top: 2px;
+	color: #000;
+}
+.news-item-date{
+	/*margin-left: 1em;*/
+	display: block;
+	margin: 0.5em 1em;
+}
+
+.news-item-brief{
+	margin-left: 1em;
+	line-height: 1.5;
+}
+
+
+.news-item figure{
+	position: absolute;
+	top: 3px;
+	left:0;
+	text-align: center;
+}
+
+.news-item img{
+	margin-bottom: 15px;
+	box-shadow: 0 10px 10px 0 #ccc;
+}
+
+.news-more{
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	padding: 8px;
+}
+.news-more::before{
+	content: "p";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top: 2px;
+	color: #36ff15;
+	margin-right: 3px;
+}
+
+
 /* 슬로건 */
 .slogan{
 	min-height: 100px;

@@ -434,6 +434,16 @@ body {
 	color: #fff;
 } 
 
+/*탭 메뉴*/
+
+.board{
+	padding: 20px 0 0 0 ;
+	display: block
+}
+.board notice {
+	background-color: #ff0;
+}
+
 /* 슬로건 */
 .slogan{
 	min-height: 100px;

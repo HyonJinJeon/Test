@@ -34,7 +34,7 @@ a:link, a:visited{
 	padding: 0
 }
 /* 플로트 이슈를 해결하기 위한 clearfix */
-.main-content::after, .member::after, .term-list::after{
+.main-content::after, .member::after, .term-list::after, .notice::after{
 	content: "";
 	display: block;
 	clear: both;
@@ -434,15 +434,77 @@ body {
 	color: #fff;
 } 
 
-/*탭 메뉴*/
-
+/*공지사항 및 자료실*/
 .board{
-	padding: 20px 0 0 0 ;
-	display: block
+	margin-top: 20px;
+	position: relative; 
+	background-color: yellow;
 }
-.board notice {
-	background-color: #ff0;
+
+.notice-list, .pds-list, .notice-more, .pds-more{
+	display: none;
 }
+
+.board-active .notice-list, .board-active .pds-list,
+.board-active .notice-more, .board-active .pds-more{
+	display: block !important;
+}
+
+.notice-subject, .pds-subject{
+	/*background-color: aqua;*/
+	position: absolute;
+	top: 0px;
+}
+
+.notice-subject{
+	left: 0px;
+}
+.pds-subject{
+	left: 74px;
+}
+
+.board .tab{
+	display: block;
+	/*a태그 블록화...*/
+	font-size: 1.4rem;
+	padding: 7px 10px;
+	border: 1px solid #aaa;
+	border-radius: 10px 10px 0 0;
+	background: linear-gradient(to bottom, #eee, #ccc);
+	background: #ccc;
+	color: #666;
+}
+
+.board-active .tab{
+	color: #fa4306;
+	border-color: #fa4306;
+	background-color: #fff;
+	border-bottom-color: #fff;
+}
+
+.notice-list, .pds-list {
+	background-color: lime; 
+	padding-top: 45px;
+}
+
+.notice-more, .pds-more {
+	/*background-color: pink;*/
+	position: absolute;
+	top: -8px;
+	right:-8px;
+	padding: 8px;
+}
+
+.notice-more::before, .pds-more::before{
+	content: "p";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top: 2px;
+	color: darkgreen;
+	margin-right: 3px;
+}
+  
+
 
 /* 슬로건 */
 .slogan{

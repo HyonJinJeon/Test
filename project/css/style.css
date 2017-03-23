@@ -38,7 +38,6 @@ a:link, a:visited{
 	content: "";
 	display: block;
 	clear: both;
-	/*부모요소의 가상의 자식을 만들어서 위아래 마진을 만듬.(다른자식참조)*/
 }
 /* 본문 스타일 */
 html{
@@ -336,207 +335,154 @@ body {
 	line-height: 30px;
 	text-indent: 45px;
 }
-
-/*웹관련용어*/
+/* 웹 관련 용어 */
 .term{
-		
 	border: 1px solid #aaa;
 	border-radius: 5px;
 	background: linear-gradient(to bottom, #eee, #ccc);
 	background-color: #ccc;
-
-	/*padding: 15px 15px 15px 15px;
-	 top,left,bottom, right 동일할경우 1개만지정.
-	*/
 	padding: 15px;
 	margin-top: 20px;
-	
 }
-
 .term-subject{
-	/*margin-left: 10px;*/
-	/*background-color: #ff0;*/
 	font-family: 'Noto Sans Bold';
-	font-size: 1.6rem
+	font-size: 1.6rem;
 }
-
-.term a{
+.term a {
 	display: block;
 	margin-top: 15px;
 }
-
-.term-list-subject, .term-list-brief{ 
+.term-list-subject, .term-list-brief{
 	float: right;
 	width: 145px;
 }
 .term-list-subject{
 	color: #296897;
-	margin-top:-2px;
 	font-family: 'Noto Sans Bold';
+	margin-top: -2px;
 }
 .term-list-thumbnail{
-	/*float: left;*/
-	/*background-color: lime;*/
 	float: left;
 }
 .term-list-brief{
-	/*background-color: orange;*/
 	line-height: 1.5;
 	margin-top: 10px;
 }
-
-/*웹카페 검색*/
+/* 웹 카페 검색 */
 .search{
 	border: 1px solid #aaa;
 	border-bottom: 0;
-	border-radius: 20px 20px 0 0 ;
+	border-radius: 25px 25px 0 0;
 	background: linear-gradient(to bottom, #ccc, #fff);
 	background-color: #ccc;
 	padding: 20px 25px 5px;
-	
-	/*3번쓰면 가운데가 좌우, 2번쓰면 위 아래
-	  top부터 시계방향
-	*/
 }
-
 .search-form fieldset{
 	border: 0;
 }
-
 .search-form label::before{
 	content: "z";
 	font-family: 'webcafeIcon';
 	position: relative;
 	top: 2px;
-	margin-right: 2px;
+	margin-right: 3px;
 }
-
 .search-form input{
 	border: 1px solid #aaa;
 	width: 200px;
 	height: 20px;
 	padding: 1px 1px 1px 5px;
 	border-radius: 3px;
-	/*margin: 0 15px ;*/
 	font-size: 1.3rem;
 	margin: 0 4px 0 3px;
-	/*top right bottom left*/
 }
-
 .btn-search{
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	color: #fff;
 	height: 22px;
 	padding: 1px 10px;
-	border:1px solid #aaa;	
+	border:1px solid #aaa;
 	border-radius: 3px;
-	background-image: linear-gradient(to bottom, #999, #333);
-	background-color: #333;
-	color: #fff;
-} 
-
-/*공지사항 및 자료실*/
+	background: linear-gradient(to bottom, #999, #333);
+}
+/* 공지사항 및 자료실 */
 .board{
 	margin-top: 20px;
-	position: relative; 
-	/*background-color: yellow;*/
+	position: relative;
 }
-
-.notice-list, .pds-list, .notice-more, .pds-more{
+.notice-list,.pds-list, .notice-more, .pds-more{
 	display: none;
 }
-
-.board-active .notice-list, .board-active .pds-list,
+.board-active .notice-list, .board-active .pds-list, 
 .board-active .notice-more, .board-active .pds-more{
-	display: block ;
+	display: block;
 }
-
 .notice-subject, .pds-subject{
-	/*background-color: aqua;*/
 	position: absolute;
-	top: 0px;
+	top: 0;
 }
-
 .notice-subject{
-	left: 0px;
-}
+	left: 0;
+} 
 .pds-subject{
 	left: 74px;
 }
-
 .board .tab{
 	display: block;
-	/*a태그 블록화...*/
 	font-size: 1.4rem;
 	padding: 7px 10px;
 	border: 1px solid #aaa;
 	border-radius: 10px 10px 0 0;
 	background: linear-gradient(to bottom, #eee, #ccc);
-	background: #ccc;
+	background-color: #ccc;
 	color: #666;
 }
-
 .board-active .tab{
 	color: #fa4306;
 	border-color: #fa4306;
-	background-color: #fff;
 	border-bottom-color: #fff;
+	background: #fff;
 }
-
-.notice-list, .pds-list {
-	/*background-color: lime; */
+.notice-list, .pds-list{
 	padding-top: 40px;
 }
-
 .notice-list li, .pds-list li{
-	/*background-color: #ff0;*/
 	margin: 8px 0;
 }
-
 .notice-list li::before, .pds-list li::before{
 	content: "r";
 	font-family: 'webcafeIcon';
-	
 	margin-right: 3px;
-
 }
-
 .board-headline{
-	/*background-color: aqua;*/
-	display: inline-block;
 	width: 285px;
-	/*말줄임표만들기*/
+	display: inline-block;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
 .board-date{
-	/*background-color: green;*/
-	float:right;
+	float: right;
 }
-
-.notice-more, .pds-more {
-	/*background-color: pink;*/
+.notice-more, .pds-more{
 	position: absolute;
 	top: -8px;
-	right:-8px;
+	right: -8px;
 	padding: 8px;
 }
-
 .notice-more::before, .pds-more::before{
 	content: "p";
 	font-family: 'webcafeIcon';
 	position: relative;
 	top: 2px;
-	color: darkgreen;
+	color: #36ff15;
 	margin-right: 3px;
 }
-  
-/*새소식*/
+/* 새소식 */
 .news{
+	margin-top: 20px;
 	background-color: yellow;
 }
-
 /* 슬로건 */
 .slogan{
 	min-height: 100px;

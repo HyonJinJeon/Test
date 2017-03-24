@@ -64,6 +64,11 @@ a:visited {
     color: inherit;
 }
 
+a:hover,
+a:focus{
+    color: red;
+}
+
 
 /* 숨김 콘텐츠 */
 
@@ -104,7 +109,7 @@ body {
     font-size: 1.4rem;
     /* html 기본 글자크기 * 1.4 = 14px */
     font-family: 'Noto Sans Regular';
-    background: #fff linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
+    background: #fff linear-gradient(to bottom, #aaa 0%, #fff 70%, #ccc 100%);
 }
 
 
@@ -336,7 +341,7 @@ body {
 /* 메인 콘텐츠 */
 
 .main-content {
-    background-color: #fff;
+    background-color: #ddd;
     padding: 30px 15px;
     min-height: 400px;
     border-radius: 15px 15px 0 0;
@@ -795,6 +800,7 @@ body {
 
 .btn-event-prev,
 .btn-event-next {
+    cursor: pointer;
     border: 0;
     padding: 0;
     width: 20px;
@@ -827,6 +833,19 @@ body {
     border-radius: 3px;
     height: 25px;
     overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    /*transition-property: height, padding;
+    transition-duration: 2s;
+    transition-delay: 0s 2s;
+    transition-timing-function: ease-in-out;*/
+
+}
+
+.related-list:hover
+,.related-list:focus{
+    height: 125px;
+    padding: 10px 0;
+    /*background: #ffc;*/
 }
 
 .related-list a {
@@ -834,15 +853,153 @@ body {
     line-height: 25px;
     text-indent: 25px;
 }
+/*인기사이트*/
+.hot{
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    background-color: #ccc;
+    padding: 10px;
+
+    position: relative;
+}
+
+.hot-subject {
+    font-size: 1.6rem;
+    font-family: 'Noto Sans Bold';
+}
+
+.hot-subject span{
+    color: #fa4306;
+}
+
+
+.hot-more {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 8px;
+}
+
+.hot-more::before {
+    content: "p";
+    font-family: 'webcafeIcon';
+    position: relative;
+    top: 2px;
+    color: #36ff15;
+    margin-right: 3px;
+}
+
+.hot-list {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.hot-list li{
+    
+    counter-increment: number;
+
+    position: relative;
+}
+
+.hot-list li::before{
+    content: counter(number, decimal );
+    background-color: #aaa;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.hot-list>li>a{
+    /*background-color: #ff0;*/
+    padding-left: 3px;
+    display: inline-block;
+    width: 135px;
+}
+
+.hot-list .up,
+.hot-list .down,
+.hot-list .stop {
+    font-style: normal;
+    /*float: right;*/
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 11px;
+    width: 9px;
+
+    margin-top: -5px;
+
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: url(images/rank.png) no-repeat;
+}
+.hot-list .down {
+    background-position: 0 100%;
+}
+.hot-list .stop {
+    background-position: 0 50%;
+}
+
+
+.hot-list .ir-hot{
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
 
 
 /* 슬로건 */
 
 .slogan {
-    min-height: 100px;
+    /*background-color: #ff0;*/
+    /*min-height: 100px;*/
+    position: relative;
 }
 
+.slogan-subject {
+    /*float: right;*/
+    width: 110px;
+    height: 83px;
+    background: url(images/coffee.png) no-repeat;
+    
+    position: absolute;
+    left: 45px;
+    bottom: -25px;
+}
 
+.slogan .ir-text{
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.slogan-content{
+    /*background-color: lime;*/
+    position: absolute;
+    
+    margin: 10px 100px 10px 200px;
+    font-size: 1.3rem;
+    color:#a09874;
+    /*left: 100px;
+    width: 700px;*/
+}
+.slogan-content q{
+    font-weight: bold;
+}
+.slogan-content q::before{
+    font-size: 3rem;
+    position: relative;
+    top: 10px;
+}
+.slogan-content q::after{
+    content: "";
+}
 /* 푸터 */
 
 .footer-bg {

@@ -937,13 +937,10 @@ body {
     margin-right: 3px;
 }
 
-
 /* 슬로건 */
-
 .slogan {
     position: relative;
 }
-
 .slogan-subject {
     position: absolute;
     left: 45px;
@@ -953,60 +950,60 @@ body {
     background-image: url(images/coffee.png);
     background-repeat: no-repeat;
 }
-
 .slogan-content {
     margin: 10px 100px 10px 200px;
     font-size: 1.3rem;
     color: #a09874;
 }
-
 .slogan-content q {
     font-weight: bold;
 }
-
 .slogan-content q::before {
     font-size: 3rem;
     position: relative;
     top: 10px;
 }
-
 .slogan-content q::after {
     content: "";
 }
 
-
 /* 푸터 */
-
 .footer-bg {
     background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
+    /*background-color: #ff0;*/
 }
 
 .footer {
     background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
-    min-height: 100px;
-}   font-size: 1.3rem;
+    /*min-height: 100px;*/
+    font-size: 1.3rem;
     color:#a09874;
-    /*left: 100px;
-    width: 700px;*/
-}
-.slogan-content q{
-    font-weight: bold;
-}
-.slogan-content q::before{
-    font-size: 3rem;
     position: relative;
-    top: 10px;
-}
-.slogan-content q::after{
-    content: "";
-}
-/* 푸터 */
+}  
+.footer .footer-logo{
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
 
-.footer-bg {
-    background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
+}
+.footer .tech-logo{
+    position: absolute;
+    top:15px;
+    right:50px;
 }
 
-.footer {
-    background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
-    min-height: 100px;
+.footer .guide-list, .footer>address, .footer.copyright{
+    position: relative;
+    left:200px;
+}
+
+.footer .guide-list>li{
+    background-color: lightslategray;
+    display: inline-block;
+    /*position: relative;*/
+}
+
+.footer .guide-list>li>a{
+    color: white;
+    /**/
 }

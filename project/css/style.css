@@ -620,6 +620,36 @@ body {
 	font-style: normal;
 }
 
+.btn-event{
+	background-color: #ff0;
+/*
+	width: 55px;
+	height: 18px;
+	background-image: url(images/backpage_forwardpage.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;*/
+}
+ 
+.btn-event-prev,
+.btn-event-next
+{
+	border: 0;
+	padding: 0;
+	width: 20px;
+	height: 18px;
+
+	background: url(images/back_forward.png) no-repeat;
+}
+
+.btn-event-next{
+	background-position: -35px 0;
+}
+
+.ir-text{
+	position: absolute;
+	clip: rect(1px,1px,1px,1px);
+	clip: rect(1px 1px 1px 1px);
+}
 
 
 /* 슬로건 */
@@ -628,6 +658,7 @@ body {
 }
 /* 푸터 */
 .footer-bg	{
+	width: 100%;
 	background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
 }
 .footer{

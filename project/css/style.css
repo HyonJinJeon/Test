@@ -937,10 +937,14 @@ body {
     margin-right: 3px;
 }
 
+
 /* 슬로건 */
+
 .slogan {
     position: relative;
+    z-index: 10;
 }
+
 .slogan-subject {
     position: absolute;
     left: 45px;
@@ -950,60 +954,85 @@ body {
     background-image: url(images/coffee.png);
     background-repeat: no-repeat;
 }
+
 .slogan-content {
     margin: 10px 100px 10px 200px;
     font-size: 1.3rem;
     color: #a09874;
 }
+
 .slogan-content q {
     font-weight: bold;
 }
+
 .slogan-content q::before {
     font-size: 3rem;
     position: relative;
     top: 10px;
 }
+
 .slogan-content q::after {
     content: "";
 }
 
+
 /* 푸터 */
+
 .footer-bg {
     background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
-    /*background-color: #ff0;*/
 }
 
 .footer {
     background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
-    /*min-height: 100px;*/
-    font-size: 1.3rem;
-    color:#a09874;
+    min-height: 100px;
+    padding: 10px 90px 10px 200px;
     position: relative;
-}  
-.footer .footer-logo{
+}
+
+
+/* 푸터 로고 */
+
+.footer-logo {
     position: absolute;
-    left: 25px;
-    bottom: 20px;
-
+    left: 45px;
+    top: 35px;
 }
-.footer .tech-logo{
+
+
+/* HTML5와 CSS3 로고 */
+
+.tech-logo {
     position: absolute;
-    top:15px;
-    right:50px;
+    top: 10px;
+    right: 0;
 }
 
-.footer .guide-list, .footer>address, .footer.copyright{
-    position: relative;
-    left:200px;
+
+/* 가이드 링크 */
+
+.guide-list {
+    background-color: #7b8385;
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-around;
+    border-radius: 15px;
 }
 
-.footer .guide-list>li{
-    background-color: lightslategray;
-    display: inline-block;
-    /*position: relative;*/
+.guide-list a {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
 }
 
-.footer .guide-list>li>a{
-    color: white;
-    /**/
+
+/* 주소 및 저작권 정보 */
+
+address {
+    font-style: normal;
+    margin: 10px 0 5px;
+}
+
+.address,
+.tel {
+    margin-right: 10px;
 }
